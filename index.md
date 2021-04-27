@@ -1,4 +1,4 @@
-## HARDWARD 
+## HARDWARE
 
 ```markdown
     
@@ -28,6 +28,15 @@
    Example:
              `lsmod | grep sound`
    Note: Use the modules directory to search all your modules: /lib/modules/`uname -r`/kernel
+   
+```
+
+```markdown
+    
+   Use:     `modprobe` 
+   To:      Load a module
+   Example:
+             `modprobe soundcore`
    
 ```
 
