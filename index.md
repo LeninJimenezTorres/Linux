@@ -1,3 +1,44 @@
+## HARDWARD 
+
+```markdown
+    
+   Use:     `lsusb` 
+   To:      show all usb peripherical component plugged to the device
+
+```
+
+```markdown
+    
+   Use:     `lspci` 
+   To:      show all peripherical component interface plugged to the slots of the device.
+
+```
+
+```markdown
+    
+   Use:     `lshw` 
+   To:      show all kind of devices connected to the pc.
+
+```
+
+```markdown
+    
+   Use:     `lsmod` 
+   To:      show all modules loaded.
+   Example:
+             `lsmod | grep sound`
+   Note: Use the modules directory to search all your modules: /lib/modules/`uname -r`/kernel
+   
+```
+
+```markdown
+    
+   Use:     `uname` with +  `-a, -r, and others` 
+   To:      Print all kind of information about the system.
+
+```     
+    
+
 
 ## NETWORK CONFIGURATIONS
 
