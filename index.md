@@ -6,6 +6,8 @@
    To:      show all usb peripherical component plugged to the device
 
 ```
+You can use the directory of peripherical devices to find your usb or pci device driver, which is usually stored in: `/dev/`
+
 
 ```markdown
     
@@ -115,6 +117,62 @@
     Description: To show all news of the network interfaces
 
 ```
+
+```markdown
+    
+    Use: `systemd-resolv --status`
+    Description: To show the list of network configurations and their status, for instance:
+                `
+                Global
+                    LLMNR setting: no
+                    MulticastDNS setting: no
+                    DNSOverTLS setting: no
+                    DNSSEC setting: no
+                    DNSSEC supported: no
+
+                Link 2 (enp0s3)
+                    Current Scopes: DNS            
+                    DefaultRoute setting: yes            
+                    LLMNR setting: yes            
+                    MulticastDNS setting: no             
+                    DNSOverTLS setting: no             
+                    DNSSEC setting: no             
+                    DNSSEC supported: no             
+                    Current DNS Server: 200.107.10.105 
+                    DNS Servers: 200.107.10.105 
+                                 181.113.126.100
+                `
+                
+```
+
+### DNS
+
+To search a ip address of a dns you can use:
+
+```markdown
+    
+    Use: `host google.com`
+    
+    Note: this is simillar to `tracert` in windows
+```
+
+Also to search a problem with the dns you can use the `ping` command to the ip and the dns to check it.
+
+Additionally, you can use the file or directory of the DNS configuration, which is usually stored in the directory: 
+                        `cat /etc/resolv.conf`
+
+#### Create your own DNS indices
+
+```markdown
+    
+    Use: `sudo nano /etc/hosts`
+    
+    Here you can add your own ip/dns configuration
+    
+```
+
+### SSH Connectivity 
+
 
 
 ## Directories
