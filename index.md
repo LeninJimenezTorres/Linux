@@ -177,7 +177,27 @@ You need install and runing a software on both the client and the server machine
 
 ```markdown
                 sudo apt install openssh-server
+                sudo apt install openssh-client
+             
 ```
+The ssh configuration you can find it in: `/etc/ssh`
+And if you need to change the parameters you can change the file: `sudo nano ssh_config`
+
+To connect to a ssh server you can use:
+```markdown
+               command: ssh pepito@10.0.0.1 
+```
+
+And if you need to specify the protocol, you can use:
+```markdown
+               command: ssh -p 2222 pepito@10.0.0.1 
+```
+
+Or if you need to run an instance of Amazon, use:
+```markdown
+               command: ssh -i /home/mortem/Documents/key.pem ubuntu@10.0.0.1 
+```
+
 
 ## Directories
 ```markdown
