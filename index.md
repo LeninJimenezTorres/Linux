@@ -198,6 +198,13 @@ Or if you need to run an instance of Amazon, use:
                command: ssh -i /home/mortem/Documents/key.pem ubuntu@10.0.0.1 
 ```
 
+### SCP - Secure Copy
+
+To make secure copy files between remote machines. You can use:
+```markdown
+                command: scp /home/mortem/Documents/pepito.text ubuntu@10.0.1.12
+```
+
 
 ## Directories
 ```markdown
