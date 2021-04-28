@@ -202,8 +202,9 @@ Or if you need to run an instance of Amazon, use:
 
 To make secure copy files between remote machines. You can use:
 ```markdown
-                command: scp /home/mortem/Documents/pepito.text ubuntu@10.0.1.12
+                command: scp /home/mortem/Documents/pepito.text ubuntu@10.0.1.12:/home/remote_user/Documents/
 ```
+
 
 
 ## Directories
