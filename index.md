@@ -173,7 +173,11 @@ Additionally, you can use the file or directory of the DNS configuration, which 
 
 ### SSH Connectivity 
 
+You need install and runing a software on both the client and the server machine to enable the conection. Here I advice you the OpenSSH
 
+```markdown
+                sudo apt install openssh-server
+```
 
 ## Directories
 ```markdown
