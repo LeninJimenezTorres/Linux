@@ -185,24 +185,42 @@ And if you need to change the parameters you can change the file: `sudo nano ssh
 
 To connect to a ssh server you can use:
 ```markdown
-               command: ssh pepito@10.0.0.1 
+               command: ssh pepito @ 10.0.0.1 
+                            [____]   [______]
+                               |         |_______ public ip address of the remote ssh system
+                               |_________________ user of the remote system
 ```
 
 And if you need to specify the protocol, you can use:
 ```markdown
-               command: ssh -p 2222 pepito@10.0.0.1 
+               command: ssh -p 2222  pepito  @ 10.0.0.1 
+                               [___] [_____]   [______]
+                                 |      |          |________ public ip address of the remote ssh system
+                                 |      |___________________ user of the remote system
+                                 |__________________________ the specific port of the connection
 ```
 
 Or if you need to run an instance of Amazon, use:
 ```markdown
-               command: ssh -i /home/mortem/Documents/key.pem ubuntu@10.0.0.1 
+               command: ssh -i /home/mortem/Documents/key.pem  ubuntu @ 10.0.0.1 
+                               [_____________________________] [_____]  [_______]
+                                              |                   |         |________ public ip address of remote instance
+                                              |                   |__________________ user of the remote system          
+                                              |______________________________________ This is the key generated in AWS when you create the instance, you need download it.
+                                              
 ```
 
 ### SCP - Secure Copy
 
 To make secure copy files between remote machines. You can use:
 ```markdown
-                command: scp /home/mortem/Documents/pepito.text ubuntu@10.0.1.12:/home/remote_user/Documents/
+                command: scp /home/mortem/Documents/pepito.text  ubuntu @ 10.0.1.12  : /home/remote_user/Documents/
+                             [________________________________]  [____]   [________]   [__________________________]
+                                             |                      |          |                    |________________ location or directory to place the shared file into remote user
+                                             |                      |          |_____________________________________ public ip address of remote system
+                                             |                      |________________________________________________ remote user 
+                                             |_______________________________________________________________________ local document or file that you want to share to the remote user
+                             
 ```
 
 
