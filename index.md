@@ -224,8 +224,9 @@ To make secure copy files between remote machines. You can use:
 ```
 
 
+## SYSTEM NAVEGATION
 
-## Directories
+### Directories
 ```markdown
     
     Use `.` to refer to the current directory
@@ -234,7 +235,7 @@ To make secure copy files between remote machines. You can use:
   
 ```
 
-## To get a specific column of a .csv
+### To get a specific column of a .csv
 ```markdown
     
             `cut -d: -f3 archivo.csv`
@@ -245,7 +246,7 @@ To make secure copy files between remote machines. You can use:
   
 ```
 
-## To sort information
+### To sort information
 ```markdown
 
             You can use:
@@ -255,7 +256,7 @@ To make secure copy files between remote machines. You can use:
 
 ```
 
-## To count characters in a file
+### To count characters in a file
 ```markdown
 
             `wc file.txt`
@@ -263,6 +264,37 @@ To make secure copy files between remote machines. You can use:
 
 ```
 
+## USERS AND GROUPS PERMISSIONS
+
+
+## SCRIPTING
+
+### Shell scripting
+You can use any shell that you prefer, the only you need is to install that shell or be sure that it's already installed. To do this you can search all of you shells in the directory: `/etc/shells`
+
+The most used is bash shell, so you can install right now.
+
+### Shebang / Hashbang
+This is the usually name given to the bash call in a script, by the command line:
+
+```markdown
+                    #! /bin/bash
+```
+
+### Variable declare
+```markdown
+                declare  -i  variable1
+                         [_] [_______]
+                          |      |_______ name of variable
+                          |______________ type of variable, integer int his case
+```
+
+### Loops - For command
+```markdown
+                for i in {0..10..2}
+                    do echo "We have been through this $i times already!"
+                    done
+```
 
 
 # Autor:
