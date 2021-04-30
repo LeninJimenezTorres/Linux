@@ -51,9 +51,95 @@ You can use the directory of peripherical devices to find your usb or pci device
 ```     
     
 ## SYSTEM
+
 ### GNU GRUB 
+
 GRUB is a complete program for loading and managing the boot process. It is the most common bootloader for Linux distributions. A bootloader is the first software that runs when a computer starts. It loads the kernel of the operating system and then the kernel initializes the rest of the operating system: shell, display manager, desktop environment, etc.
 GRUB is both a bootloader (load the OS) and a boot manager (allows you to choose between operating systems, if there is more than one on your system).
+
+It has the directory: `/grub/`
+
+Their configuration is stored in: 
+                                    `/grub/grub.cfg` 
+                                    `/etc/default/grub`
+                                    `/etc/grub.d`
+            
+You can update grub with the command:
+```markdown
+                sudo update-grub
+```
+
+### Linux runlevels
+                    0 system halt to shut off machine
+                    1 single user (rescue) mode
+                    3 multi-user mode without GUI (to server aplications, providing only terminal connections)
+                    5 multi-user mode with GUI (to standar desktop machine)
+                    6 reboot
+
+To set the run level use the command:
+```markdown
+                    sudo telinit 0-------------> old command
+                    systemctl enable multi-user.target
+                    systemctl isolate rescue.target
+                    
+```
+
+To see your current run level use the command:
+```markdown
+                    systemctl get-default
+```
+
+### Root-level directories
+```markdown
+                    /bin    Binary files for single user mode system commands
+                    /sbin   System Binary files multi user syst3em commands
+                    /boot   Linux images and boot configuration files
+                    /dev    Pseudo fles representing physical and virtual devices: PCIs, usb devices.
+                    /etc    Configuration files
+                    /home   User files
+                    /lib    Software libreries dependencies needed by binary programs
+                    /root   Root user files
+                    /usr    Additional binaries - non essential commands
+                    /var    Updating files: logs, application data, cache  
+                    /temp   Data taht only be used in the current session
+```
+ 
+### Pseudo files directories
+To sudo files and commands:
+```markdown
+                    /proc   Files representing running system process
+                    /dev    Pseudo files representing hardware devices and devices drivers
+                    /sys    Data on system and kernel resources
+ 
+```
+
+### System commands
+
+
+```markdown
+                Command: locale
+                Description: reflect your geographic location
+                
+                Command: pwd
+                Description: Print working or current directory
+                
+                Command: env
+                Description: To see all shell variables
+                
+                Command: locale
+                Description: reflect your geographic location
+                
+                Command: type [command]
+                Description: to search the location of the command
+                
+                Command: timedatectl
+                         timedatectl list-timezones
+                         timedatectl set-timezone [zone file]
+                Description: to see time and zones
+                
+```
+
+
 
 
 ## NETWORK CONFIGURATIONS
@@ -291,6 +377,11 @@ This is the usually name given to the bash call in a script, by the command line
                          [_] [_______]
                           |      |_______ name of variable
                           |______________ type of variable, integer int his case
+```
+
+### Export a variable
+```makdown
+                export variablename
 ```
 
 ### Loops - For command
