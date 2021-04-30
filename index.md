@@ -50,6 +50,10 @@ You can use the directory of peripherical devices to find your usb or pci device
 
 ```     
     
+## SYSTEM
+### GNU GRUB 
+GRUB is a complete program for loading and managing the boot process. It is the most common bootloader for Linux distributions. A bootloader is the first software that runs when a computer starts. It loads the kernel of the operating system and then the kernel initializes the rest of the operating system: shell, display manager, desktop environment, etc.
+GRUB is both a bootloader (load the OS) and a boot manager (allows you to choose between operating systems, if there is more than one on your system).
 
 
 ## NETWORK CONFIGURATIONS
@@ -291,10 +295,49 @@ This is the usually name given to the bash call in a script, by the command line
 
 ### Loops - For command
 ```markdown
-                for i in {0..10..2}
+                for  s  in  $array
+                    [_]     [____]
+                     |         |______ the list of iterations
+                     |________________ the variable of iterations
+                     
+                     do [action]
+                     done
+                     
+           For instance:
+                for i in {0..10..2} -----------------------------> It will begin in 0 up to 10 with increments of 2.
                     do echo "We have been through this $i times already!"
                     done
 ```
+
+### If condition
+```markdown
+                if test [condition]
+                   [__] [_________]
+                     |       |____________ you can use logical operator like: `A != B`. Notice that here you need to separate each term with a space.
+                     |____________________ you can replace it with brackets to revolve the condition, like: `if [ $A != $B ]`. (You need to use a space after each term!!!) 
+                     
+                            then [action]
+                    
+                    elif 
+                    
+                            then [action]
+                    
+                    else
+                
+                fi
+```
+
+### Switch condition
+```markdown
+                    while
+```
+
+### While loop
+```markdown
+                    while
+```
+
+
 
 
 # Autor:
