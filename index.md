@@ -45,10 +45,24 @@ You can use the directory of peripherical devices to find your usb or pci device
 
 ```markdown
     
-   Use:     `uname` with +  `-a, -r, and others` 
+   Use:     `uname [option like: -a, -r, and others ] ` 
    To:      Print all kind of information about the system.
 
-```     
+```   
+
+
+```markdown
+    
+   Use:        `df -h  -t  ext4` ``
+                [_] [_] [___]
+                 |   |    |_____ formating type
+                 |   |__________ To especify a formating type
+                 |______________ Human readable size units
+                
+   To:      Display all the block devices current mounted on the system
+   
+```
+
     
 ## SYSTEM
 
