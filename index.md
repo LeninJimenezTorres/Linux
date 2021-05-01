@@ -152,8 +152,17 @@ To sudo files and commands:
                 Description: to see time and zones
                 
 ```
+### Priority
+To set the priority you can use the `nice` command. It run a program with modified scheduling priority. To change the priority you need to be root user or superuser, otherwise you only will can change the process with a priority between 0-20. 
+The default priority value is 0.
 
-
+```markdown
+                Command: nice -n<PRIORITY> COMMAND
+                                 [_______] [_____]
+                                     |        |______ You can use any command like a process, script, and more.
+                                     |_______________ The range is from -20 to 20, being the -20 the mayor priority
+                             
+```
 
 
 ## NETWORK CONFIGURATIONS
