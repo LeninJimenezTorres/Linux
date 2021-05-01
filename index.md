@@ -54,10 +54,10 @@ You can use the directory of peripherical devices to find your usb or pci device
 ```markdown
     
    Use:        `df -h  -t  ext4` ``
-                [_] [_] [___]
-                 |   |    |_____ formating type
-                 |   |__________ To especify a formating type
-                 |______________ Human readable size units
+                   [_] [_] [___]
+                    |   |    |_____ formating type
+                    |   |__________ To especify a formating type
+                    |______________ Human readable size units
                 
    To:      Display all the block devices current mounted on the system
    
@@ -127,6 +127,16 @@ To sudo files and commands:
  
 ```
 
+### Comments
+
+```markdown
+                Command: `#`
+                Description: to comment one line
+                
+                Commando: `: '___________________' `              
+                Description:
+```
+
 ### System commands
 
 
@@ -161,7 +171,9 @@ The default priority value is 0.
                                  [_______] [_____]
                                      |        |______ You can use any command like a process, script, and more.
                                      |_______________ The range is from -20 to 20, being the -20 the mayor priority
-                             
+                 
+                 For example: `nice -n-20 ./prueba.pl`
+                                
 ```
 
 
@@ -219,7 +231,7 @@ The default priority value is 0.
     Use: `netstat -i`
     Description: To show statistics of each network interface
     
-    Use: `snetstat -l`
+    Use: `netstat -l`
     Description: To show protocols in process and their ports
 
 ```
@@ -353,9 +365,8 @@ To make secure copy files between remote machines. You can use:
     
             `cut -d: -f3 archivo.csv`
                   [_] [_] 
-                   |   |_ _ The number of column that we need to get the value  
-                   |
-                    - The delimiter of the columns
+                   |   |____ The number of column that we need to get the value  
+                   |________ The delimiter of the columns
   
 ```
 
@@ -378,6 +389,18 @@ To make secure copy files between remote machines. You can use:
 ```
 
 ## USERS AND GROUPS PERMISSIONS
+
+### Types of object owners
+There are: - User (owner)
+           - Group
+           - Other
+
+### User lists
+There are two ways to see the user list, the firt is through the directory: `etc/passwd`
+
+
+### User passwords
+
 
 
 ## SCRIPTING
