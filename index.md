@@ -296,8 +296,9 @@ Additionally, you can use the file or directory of the DNS configuration, which 
     
 ```
 
-### SSH Connectivity 
+### SSH CONNECTIVITY 
 
+#### Install OpenSSH
 You need install and runing a software on both the client and the server machine to enable the conection. Here I advice you the OpenSSH
 
 ```markdown
@@ -308,6 +309,60 @@ You need install and runing a software on both the client and the server machine
 The ssh configuration you can find it in: `/etc/ssh`
 And if you need to change the parameters you can change the file: `sudo nano ssh_config`
 
+#### Testing SSH service
+You can check this through the running web services listening to connection, with the commnd:
+```markdown
+                Command: sudo netstat -tulpn
+                Description: Here you can see all web services running in your system, for instance:
+
+                                    roto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+                                    tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      498/systemd-resolve 
+                                    tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      702/sshd: /usr/sbin 
+                                    tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      550/cupsd           
+                                    tcp6       0      0 :::22                   :::*                    LISTEN      702/sshd: /usr/sbin 
+                                    tcp6       0      0 ::1:631                 :::*                    LISTEN      550/cupsd           
+                                    udp        0      0 127.0.0.53:53           0.0.0.0:*                           498/systemd-resolve 
+                                    udp        0      0 0.0.0.0:631             0.0.0.0:*                           668/cups-browsed    
+                                    udp        0      0 0.0.0.0:47957           0.0.0.0:*                           533/avahi-daemon: r 
+                                    udp        0      0 0.0.0.0:5353            0.0.0.0:*                           533/avahi-daemon: r 
+                                    udp6       0      0 :::41427                :::*                                533/avahi-daemon: r 
+                                    udp6       0      0 :::5353                 :::*                                533/avahi-daemon: r 
+                            
+                            In this example, you can see the TCP - 22 port service/protocol running through the directory `sshd:/user/sbin`
+                                
+```
+
+Also you can check the directory sshd:
+```markdown
+                Command: which sshd
+                Description: here you will see the directory where the ssh service was installed, for instance: `/user/sbin/sshd`
+```
+
+Also you can check if the SSH is running with:
+```makdown
+                Command: systemctl status ssh
+                Description: Here you will get the status of the SSH service, like the follow:
+                
+                        ● ssh.service - OpenBSD Secure Shell server
+                             Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+                             Active: active (running) since Wed 2021-05-05 17:44:46 -05; 33min ago
+                               Docs: man:sshd(8)
+                                     man:sshd_config(5)
+                           Main PID: 702 (sshd)
+                              Tasks: 1 (limit: 4648)
+                             Memory: 2.5M
+                             CGroup: /system.slice/ssh.service
+                                     └─702 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+                        may 05 17:44:41 user-VirtualBox systemd[1]: Starting OpenBSD Secure Shell server...
+                        may 05 17:44:46 user-VirtualBox sshd[702]: Server listening on 0.0.0.0 port 22.
+                        may 05 17:44:46 user-VirtualBox sshd[702]: Server listening on :: port 22.
+                        may 05 17:44:46 user-VirtualBox systemd[1]: Started OpenBSD Secure Shell server.
+
+                
+```
+
+#### Remote connection thorugh SSH
 To connect to a ssh server you can use:
 ```markdown
                command: ssh pepito @ 10.0.0.1 
