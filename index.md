@@ -398,6 +398,50 @@ There are: - User (owner)
 ### User lists
 There are two ways to see the user list, the firt is through the directory: `etc/passwd`
 
+### Group lists
+You can see the group list through the directory: `etc/group`
+
+### Create a User
+First you need to enter in root user mode, to do this you can use the SUDO - SUPER USER DO command, to get all the permission required.
+```markdown
+                Command: sudo -s
+                Description: after to enter this command, you will need to enter the password of the admin
+````
+After this, you can create the users and groups. To do this you can use the command:
+```markdown
+                Command: adduser _______
+                Description: You will need to enter a password and a few more information required.
+```
+
+### Create groups
+Into the root mode, you can use the following command to create a group:
+```markdown
+                Command: addgroup ______
+```
+
+### Delete a User
+```markdown
+                Command: userdel [______]
+                Description: Of this way, it will only delete the profile of the user, not the directory.
+                
+                Command: userdel -r [______]
+                Description: Of this way, you will delete all information of the user.
+                
+```
+
+### Delete a Group
+```markdown
+                Command: groupdel [______]       
+```
+
+### Assign a user to a group
+To do this you can use:
+```markdown
+                Command: usermod -a -G [____] [____]
+                                          |      |_____ user name
+                                          |____________ group name
+```
+
 
 ### User passwords
 
