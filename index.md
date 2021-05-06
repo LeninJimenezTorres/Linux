@@ -312,7 +312,14 @@ And if you need to change the parameters you can change the file: `sudo nano ssh
 #### Testing SSH service
 You can check this through the running web services listening to connection, with the commnd:
 ```markdown
-                Command: sudo netstat -tulpn
+                Command: sudo netstat -t  -u  -l  -p  -n
+                                      [_] [_] [_] [_] [_]
+                                       |   |   |   |   |____ Port number
+                                       |   |   |   |________ Process (by this you need the sudo command) 
+                                       |   |   |____________ Listening process
+                                       |   |________________ UDP running ports
+                                       |____________________ TCP running ports
+                                       
                 Description: Here you can see all web services running in your system, for instance:
 
                                     roto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
@@ -359,6 +366,7 @@ Also you can check if the SSH is running with:
                         may 05 17:44:46 user-VirtualBox sshd[702]: Server listening on :: port 22.
                         may 05 17:44:46 user-VirtualBox systemd[1]: Started OpenBSD Secure Shell server.
 
+
                 
 ```
 
@@ -370,6 +378,7 @@ To connect to a ssh server you can use:
                                |         |_______ public ip address of the remote ssh system
                                |_________________ user of the remote system
 ```
+First off you need to choose the `Bridge adapter` inside `Network configuration` if you are connecting to a virtual machine like VirtualBox 
 
 And if you need to specify the protocol, you can use:
 ```markdown
