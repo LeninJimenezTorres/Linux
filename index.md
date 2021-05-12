@@ -392,7 +392,7 @@ And if you need to specify the protocol, you can use:
 Or if you need to run an instance of Amazon, use:
 ```markdown
                command: ssh -i /home/mortem/Documents/key.pem  ubuntu @ 10.0.0.1 
-                               [_____________________________] [_____]  [_______]
+                               [____________________________]  [____]   [______]
                                               |                   |         |________ public ip address of remote instance
                                               |                   |__________________ user of the remote system          
                                               |______________________________________ This is the key generated in AWS when you create the instance, you need download it.
