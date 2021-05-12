@@ -245,7 +245,7 @@ The default priority value is 0.
 
 ```markdown
     
-    Use: `systemd-resolv --status`
+    Use: `systemd-resolve --status`
     Description: To show the list of network configurations and their status, for instance:
                 `
                 Global
