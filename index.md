@@ -29,7 +29,7 @@ You can use the directory of peripherical devices to find your usb or pci device
    To:      show all modules loaded.
    Example:
              `lsmod | grep sound`
-   Note: Wheter you need to do throubleshooting with some peripherical device, use this directory to search all your modules availables and determine possible problems with the controller of that device: 
+   Note: Whether you need to do throubleshooting with some peripherical device, use this directory to search all your modules availables and determine possible problems with the controller of that device: 
                                     /lib/modules/`uname -r`/kernel
    
 ```
